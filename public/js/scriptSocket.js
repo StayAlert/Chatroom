@@ -40,7 +40,7 @@ getData = async () => {
         const room = results.room
         socket.emit('joinRoom', { username, room})
         console.log(results)
-    }, 1000)
+    }, 500)
 }
 
 getData()
@@ -66,7 +66,7 @@ chatForm.addEventListener('submit', e => {
     const msgg = JSON.stringify({msg: message})
     socket.emit('chatMessage', message)
     const Http = new XMLHttpRequest();
-    const url='http://localhost:3000/keepData';
+    const url='https://young-everglades-72756.herokuapp.com/keepData';
     Http.open("POST", url, true);
     Http.setRequestHeader('Content-type', 'application/json');
     Http.send(msgg);
