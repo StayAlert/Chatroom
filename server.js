@@ -77,6 +77,10 @@ app.get('/getData', redirectLogin, (req,res) => {
     res.json({ username: sessId, room: sessRoom})
 });
 
+app.get('/getData1', (req,res) => {
+    res.json({ username: sessId, room: sessRoom})
+});
+
 app.post('/keepData', redirectLogin, (req,res) => {
     let keepp = {
         name: sessId,
