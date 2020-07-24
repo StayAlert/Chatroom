@@ -40,7 +40,7 @@ getData = async () => {
         const room = results.room
         socket.emit('joinRoom', { username, room})
         console.log(results)
-    }, 70)
+    }, 100)
 }
 
 getData()
