@@ -31,7 +31,7 @@ outputUsers = (users) => {
 
 getData = async () => {
     const Http = new XMLHttpRequest();
-    const url='http://localhost:3000/getData';
+    const url='https://young-everglades-72756.herokuapp.com/getData';
     Http.open("GET", url);
     Http.send();
     setTimeout(()=>{
@@ -39,6 +39,7 @@ getData = async () => {
         const username = results.username
         const room = results.room
         socket.emit('joinRoom', { username, room})
+        console.log(results)
     }, 50)
 }
 
